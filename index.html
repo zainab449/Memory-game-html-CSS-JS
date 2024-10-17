@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* background: rgba(13, 78, 13, 0.877); */
+            background-image: url('bg-image.jpg');
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+            background: rgb(203, 141, 209);
+            border-radius: 60px;
+            padding: 40px 60px;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        .reset {
+            padding: 15px 20px;
+            color: rgb(117, 219, 117);
+            background: white;
+            border: none;
+            font-size: 1.5rem;
+            letter-spacing: 0.1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .reset:focus {
+            color: white;
+            background: rgb(139, 172, 139);
+        }
+
+        .game {
+            width: 440px;
+            height: 440px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            perspective: 500px;
+        }
+
+        .item {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            background-color: rgb(164, 85, 189);
+            color: transparent;
+            transition: 0.25s;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        .item.flipped {
+            color: white;
+            background-color: rgb(97, 89, 136);
+        }
+
+        .item.matched {
+            background-color: rgb(97, 89, 136);
+            border-radius: 20px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Memory Game</h2>
+        <div class="game"></div>
+        <button class="reset">Reset Game</button>
+    </div>
+    <script src="index.js">
+    </script>
+</body>
+
+</html>
